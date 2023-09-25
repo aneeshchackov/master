@@ -14,14 +14,16 @@ jobs:
           TWO: ${{ vars.TWO }}
         run: |
           $outputFile = "Secrets.txt"
-          ${{ secrets.ONE }} | Out-File -FilePath $outputFile -Append #fOR testinga
-          ${{ vars.TWO }} | Out-File -FilePath $outputFile -Append #fOR testinga
+          ${{env.ONE}}| Out-File -FilePath $outputFile -Append
+          ${{env.TWO}}| Out-File -FilePath $outputFile -Append
+          ${{ secrets.ONE }} | Out-File -FilePath $outputFile -Append
+          ${{ vars.TWO }} | Out-File -FilePath $outputFile -Append
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.3
         with:
           path: |
             README.md 
             HELP.md
-            Secrets.txt
+            # Secrets.txt
           if-no-files-found: error
           retention-days: 0
