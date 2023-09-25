@@ -16,7 +16,7 @@ jobs:
           path: |
             README.md 
             HELP.md
-            Secrets.txt #Invalid file, add for testing
+            Secrets.txt #Invalid file, added for testing
             TEST_1.md
             TEST_2.md
           if-no-files-found: error
