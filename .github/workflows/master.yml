@@ -11,7 +11,7 @@ jobs:
       - name: Prepare Secrets.txt
         env:
           ONE: ${{ secrets.ONE }}
-          TWO: ${{ vars.TWO }
+          TWO: ${{ vars.TWO }}
         run: |
           $outputFile = "Secrets.txt"
            ${{ secrets.ONE }} | Out-File -FilePath $outputFile -Append #fOR testinga
