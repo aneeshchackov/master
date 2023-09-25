@@ -6,8 +6,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-        # with:
-          # repository: aneeshchackov/master
+        with:
+          repository: aneeshchackov/master
       - name: Prepare Secrets.txt
         env:
           ONE: ${{ secrets.ONE }}
