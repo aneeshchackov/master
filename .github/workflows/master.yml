@@ -15,7 +15,7 @@ jobs:
         shell: powershell
         run: |
           $outputFile = "Secrets.txt"
-          $GITHUB_REPOSITORY"
+          $GITHUB_REPOSITORY
           ${{ secrets.ONE }}
           ${{ vars.TWO }}
           ${{env.ONE}} ${{env.TWO}}
