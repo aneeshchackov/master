@@ -6,21 +6,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4.1.0
-        # with:
-          # repository: aneeshchackov/master
-      # - name: Prepare Secrets.txt
-        # env:
-          # ONE: ${{ secrets.ONE }}
-          # TWO: ${{ vars.TWO }}
-        # shell: powershell
-        # run: |
-          # $outputFile = "Secrets.txt"
-          # $GITHUB_REPOSITORY
-          # ${{ secrets.ONE }}
-          # ${{ vars.TWO }}
-          # ${{env.ONE}} ${{env.TWO}}
-          # # ${{env.ONE}} | Out-File -FilePath $outputFile -Append
-          # # ${{env.TWO}} | Out-File -FilePath $outputFile -Append
+        with:
+          repository: aneeshchackov/master
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.3
         with:
