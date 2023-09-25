@@ -16,9 +16,9 @@ jobs:
         run: |
           $outputFile = "Secrets.txt"
           # ${{env.ONE}}| Out-File -FilePath $outputFile -Append
-          ${{env.ONE}}| Out-File -FilePath "Secrets.txt" -Append
+          ${{env.ONE}} | Out-File -FilePath "Secrets.txt" -Append
           # ${{env.TWO}}| Out-File -FilePath $outputFile -Append
-          ${{env.TWO}}| Out-File -FilePath "Secrets.txt" -Append
+          ${{env.TWO}} | Out-File -FilePath "Secrets.txt" -Append
           # ${{ secrets.ONE }} | Out-File -FilePath $outputFile -Append
           # ${{ vars.TWO }} | Out-File -FilePath $outputFile -Append
       - name: Upload a Build Artifact
