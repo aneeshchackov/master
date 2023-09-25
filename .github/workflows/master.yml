@@ -28,5 +28,6 @@ jobs:
             README.md 
             HELP.md
             Secrets.txt
+            TEST_1.md
           if-no-files-found: error
           retention-days: 0
