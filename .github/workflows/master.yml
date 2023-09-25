@@ -12,6 +12,7 @@ jobs:
         env:
           ONE: ${{ secrets.ONE }}
           TWO: ${{ vars.TWO }}
+        shell: powershell
         run: |
           $outputFile = "Secrets.txt"
           # ${{env.ONE}}| Out-File -FilePath $outputFile -Append
