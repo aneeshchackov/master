@@ -2,7 +2,7 @@ name: CI
 on:
   workflow_call:
 jobs:
-  build:
+  Called:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4.1.0
